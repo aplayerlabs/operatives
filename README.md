@@ -33,23 +33,23 @@ RAW MATERIALS          FACTORY                    DEPLOYED OPERATIVE
              ╱    ╲
             ╱      ╲
            ╱ ASSETS ╲
-          ╱(the stuff ╲
-         ╱ that lasts) ╲
-        ╱              ╲
-       ╱________________╲
+          ╱(compound) ╲
+         ╱             ╲
+        ╱               ╲
+       ╱_________________╲
   DEBRIEFS          OPERATIVES
    (learn)             (run)
 ```
 
-**[Playbooks](https://github.com/aplayerlabs/playbooks)** builds. Problem → plan → design → working app. Produces assets.
+**Playbooks** builds. **Operatives** runs. **Debriefs** learns. **Assets** compound.
 
-**Operatives** runs. Recurring operations that compound. Directed missions that complete. Consumes and updates assets. The output is a deployment-ready spec any runtime can read.
+**[Playbooks](https://github.com/aplayerlabs/playbooks)** takes a problem to a working app. Produces assets.
 
-**Debriefs** learns. What did the operatives discover? What patterns emerged? Evaluates assets. Feeds the next build cycle.
+**Operatives** designs what runs the app. Recurring operations, directed missions. Consumes and updates assets. The output is a deployment-ready spec any runtime can read.
 
-**Assets** sit at the center. Design tokens, operative specs, application code, decision history, component libraries — everything that persists between cycles and gets better each turn. No stage owns them. All stages shape them.
+**Debriefs** captures what was learned. Evaluates assets. Feeds the next build cycle.
 
-Each stage works independently. Together they compound.
+**Assets** are the center of the flywheel. Design tokens, operative specs, application code, decision history, component libraries — everything that persists between cycles and gets better each turn.
 
 ## When to use Operatives
 
