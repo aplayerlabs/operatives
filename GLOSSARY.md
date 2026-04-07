@@ -1,6 +1,6 @@
 # Glossary
 
-Single source of truth for terminology in this repo. All docs, CLAUDE.md files, and scripts derive from this file. If it's not here, don't use it.
+Operatives-specific terminology. For shared A Player OS terminology, see the [master glossary](https://github.com/aplayerlabs/os/blob/main/GLOSSARY.md).
 
 ## The Company
 
@@ -27,7 +27,7 @@ A Player OS: **Build → Run → Learn → Build better.** Assets sit at the cen
 | **Skill** | A slash command. The unit of interaction. Each skill has a SKILL.md (metadata) and CLAUDE.md (operating contract). | All three products |
 | **Playfield** | The project folder where skills read from and write to. The bounded environment. | All three products |
 | **Assets** | The shared state at the center of A Player OS. Design tokens, operative specs, code, decision history, component libraries — everything that persists between cycles. No stage owns them. All stages shape them. | All three products |
-| **Operative** | An autonomous specialist. Deployed into a playfield with orientation, values, and purpose. The thing you design using this skill pack. | Operatives |
+| **Operative** | An autonomous specialist. Deployed into a playfield with orientation, values, and purpose. The thing you design using Operatives. | Operatives |
 | **Operation** | A recurring compounding cycle. Defined by the Five Jobs: physical output, boundary event, signal, leading indicator, closing mechanism. | Operatives |
 | **Mission** | An autotelic, goal-focused task that completes. Has objective and completion criteria. Findings feed operations. | Operatives |
 | **OPERATIVES.md** | The deployment manifest. The spec. Lives in the playfield root. Each skill owns a section. When complete, contains everything a runtime needs to instantiate and run an operative. | Operatives |

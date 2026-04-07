@@ -5,7 +5,7 @@ description: |
   Start here. Reads your operative architecture state and tells you what to do next.
 voice-triggers:
   - "operatives"
-  - "a player operatives"
+  - "a player os"
   - "start operatives"
 ---
 

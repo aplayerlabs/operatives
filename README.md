@@ -8,7 +8,7 @@ The spine: *The operative runs the mission. The human chooses what is worth buil
 
 ```
 RAW MATERIALS          FACTORY                    DEPLOYED OPERATIVE
-(business problem) →   (skill pack designs it) →  (spec runs on any runtime)
+(business problem) →   (the factory) →  (spec runs on any runtime)
                        
                        /significance
                        /operation-design

@@ -31,7 +31,7 @@ The skills are the design tool. The spec is the product. The runtime is the clie
 
 ```
 RAW MATERIALS          FACTORY                    DEPLOYED OPERATIVE
-(business problem) →   (skill pack designs it) →  (spec runs on any runtime)
+(business problem) →   (the factory) →  (spec runs on any runtime)
                        
                        /significance
                        /operation-design
