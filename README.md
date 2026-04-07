@@ -23,20 +23,23 @@ RAW MATERIALS          FACTORY                    DEPLOYED OPERATIVE
 
 ## Where Operatives fits
 
-[A Player Labs](https://aplayerlabs.com) makes three products. Each one does a different job. Together they form a flywheel:
+[A Player Labs](https://aplayerlabs.com) builds the flywheel for agentic businesses. Three stages, one compounding cycle:
 
 ```
-Playbooks → Operatives → Debriefs → Playbooks
-   build       run          learn       build better
+     BUILD ──→ RUN ──→ LEARN
+  (Playbooks) (Operatives) (Debriefs)
+       ↑                       │
+       └───────────────────────┘
+              build better
 ```
 
 **[Playbooks](https://github.com/aplayerlabs/playbooks)** builds the thing. Problem → plan → design → working app.
 
-**Operatives** designs what runs the thing. Recurring operations that compound. Directed missions that complete. The output is a spec — not code, not a dashboard, a deployment-ready manifest.
+**Operatives** runs the thing. Recurring operations that compound. Directed missions that complete. The output is a deployment-ready spec — not code, not a dashboard, a manifest any runtime can read.
 
 **Debriefs** learns from what ran. What did the operatives discover? What patterns emerged? What should change?
 
-Each product works independently. Together they compound.
+Each stage works independently. Together they compound.
 
 ## When to use Operatives
 

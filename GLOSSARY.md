@@ -10,15 +10,15 @@ Single source of truth for terminology in this repo. All docs, CLAUDE.md files, 
 
 ## The Products
 
-Three products. Each stands alone as a name. Never prefix with "A Player".
+Three stages of one flywheel. Each stands alone as a name. Never prefix with "A Player".
 
-| Term | What it is | Repo |
-|------|-----------|------|
-| **Playbooks** | Product #1. Builds software. Linear skill chain. | `aplayerlabs/playbooks` |
-| **Operatives** | Product #2. The agent factory. Designs operatives, produces deployment-ready specs. This repo. | `aplayerlabs/operatives` |
-| **Debriefs** | Product #3. Compounds knowledge. | `aplayerlabs/debriefs` |
+| Term | Stage | What it does | Repo |
+|------|-------|-------------|------|
+| **Playbooks** | Build | Builds software. Linear skill chain. | `aplayerlabs/playbooks` |
+| **Operatives** | Run | The agent factory. Designs operatives, produces deployment-ready specs. This repo. | `aplayerlabs/operatives` |
+| **Debriefs** | Learn | Compounds knowledge from what ran. | `aplayerlabs/debriefs` |
 
-The flywheel: **Playbooks → Operatives → Debriefs → Playbooks**.
+The flywheel: **Build → Run → Learn → Build better.**
 
 ## Core Terms
 
