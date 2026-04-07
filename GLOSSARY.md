@@ -18,7 +18,7 @@ Three stages of one flywheel. Each stands alone as a name. Never prefix with "A 
 | **Operatives** | Run | The agent factory. Designs operatives, produces deployment-ready specs. This repo. | `aplayerlabs/operatives` |
 | **Debriefs** | Learn | Compounds knowledge from what ran. | `aplayerlabs/debriefs` |
 
-The flywheel: **Build → Run → Learn → Build better.**
+The flywheel: **Build → Run → Learn → Build better.** Assets sit at the center — the shared state all three stages act on.
 
 ## Core Terms
 
@@ -26,6 +26,7 @@ The flywheel: **Build → Run → Learn → Build better.**
 |------|-----------|-------|
 | **Skill** | A slash command. The unit of interaction. Each skill has a SKILL.md (metadata) and CLAUDE.md (operating contract). | All three products |
 | **Playfield** | The project folder where skills read from and write to. The bounded environment. | All three products |
+| **Assets** | The shared state at the center of the flywheel. Design tokens, operative specs, code, decision history, component libraries — everything that persists between cycles. No stage owns them. All stages shape them. | All three products |
 | **Operative** | An autonomous specialist. Deployed into a playfield with orientation, values, and purpose. The thing you design using this skill pack. | Operatives |
 | **Operation** | A recurring compounding cycle. Defined by the Five Jobs: physical output, boundary event, signal, leading indicator, closing mechanism. | Operatives |
 | **Mission** | An autotelic, goal-focused task that completes. Has objective and completion criteria. Findings feed operations. | Operatives |

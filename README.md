@@ -23,21 +23,31 @@ RAW MATERIALS          FACTORY                    DEPLOYED OPERATIVE
 
 ## Where Operatives fits
 
-[A Player Labs](https://aplayerlabs.com) builds the flywheel for agentic businesses. Three stages, one compounding cycle:
+[A Player Labs](https://aplayerlabs.com) builds the flywheel for agentic businesses. Three stages, one compounding cycle, assets at the center:
 
 ```
-     BUILD ──→ RUN ──→ LEARN
-  (Playbooks) (Operatives) (Debriefs)
-       ↑                       │
-       └───────────────────────┘
-              build better
+            PLAYBOOKS
+             (build)
+               ╱╲
+              ╱  ╲
+             ╱    ╲
+            ╱      ╲
+           ╱ ASSETS ╲
+          ╱(the stuff ╲
+         ╱ that lasts) ╲
+        ╱              ╲
+       ╱________________╲
+  DEBRIEFS          OPERATIVES
+   (learn)             (run)
 ```
 
-**[Playbooks](https://github.com/aplayerlabs/playbooks)** builds the thing. Problem → plan → design → working app.
+**[Playbooks](https://github.com/aplayerlabs/playbooks)** builds. Problem → plan → design → working app. Produces assets.
 
-**Operatives** runs the thing. Recurring operations that compound. Directed missions that complete. The output is a deployment-ready spec — not code, not a dashboard, a manifest any runtime can read.
+**Operatives** runs. Recurring operations that compound. Directed missions that complete. Consumes and updates assets. The output is a deployment-ready spec any runtime can read.
 
-**Debriefs** learns from what ran. What did the operatives discover? What patterns emerged? What should change?
+**Debriefs** learns. What did the operatives discover? What patterns emerged? Evaluates assets. Feeds the next build cycle.
+
+**Assets** sit at the center. Design tokens, operative specs, application code, decision history, component libraries — everything that persists between cycles and gets better each turn. No stage owns them. All stages shape them.
 
 Each stage works independently. Together they compound.
 
