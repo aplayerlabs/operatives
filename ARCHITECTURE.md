@@ -44,7 +44,7 @@ RAW MATERIALS          FACTORY                    DEPLOYED OPERATIVE
                                            (client A) (client B) (client C)
 ```
 
-Operatives is the **run** stage of the [A Player Labs](https://aplayerlabs.com) flywheel: Playbooks builds, Operatives runs, Debriefs learns — with shared assets at the center. Unlike Playbooks (a linear chain) or Debriefs (a data lifecycle), Operatives is a **toolkit** — skills can be used in any order, revisited at any time, and combined however the architecture requires.
+Operatives is the **run** stage of [A Player OS](https://github.com/aplayerlabs/os): Playbooks builds, Operatives runs, Debriefs learns — with shared assets at the center. Unlike Playbooks (a linear chain) or Debriefs (a data lifecycle), Operatives is a **toolkit** — skills can be used in any order, revisited at any time, and combined however the architecture requires.
 
 ```
 /operatives (router)

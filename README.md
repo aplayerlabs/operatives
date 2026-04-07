@@ -23,7 +23,7 @@ RAW MATERIALS          FACTORY                    DEPLOYED OPERATIVE
 
 ## Where Operatives fits
 
-Operatives is the **run** stage of [The AI Flywheel](https://github.com/aplayerlabs/flywheel) by [A Player Labs](https://aplayerlabs.com). Four stages, one compounding cycle, [assets](https://github.com/aplayerlabs/assets) at the center:
+Operatives is the **run** stage of [A Player OS](https://github.com/aplayerlabs/os) by [A Player Labs](https://aplayerlabs.com). Four stages, one compounding cycle, [assets](https://github.com/aplayerlabs/assets) at the center:
 
 ```
             PLAYBOOKS
@@ -68,7 +68,7 @@ If you're asking "how do I make this run itself and compound?" — type `/operat
 
 - **Skills** are the nine specialist slash commands. Use them in any order, revisit anytime.
 - **OPERATIVES.md** is the deployment manifest. Each skill writes a section. The complete document is everything a runtime needs to instantiate and run an operative.
-- **Operations** are recurring compounding cycles. The flywheel. Defined by the Five Jobs.
+- **Operations** are recurring compounding cycles. Defined by the Five Jobs.
 - **Missions** are goal-focused tasks that complete. Research, audits, investigations.
 - The **playfield** is the bounded environment where the operative works.
 
