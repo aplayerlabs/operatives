@@ -4,32 +4,47 @@ How Operatives works under the hood.
 
 ## Nomenclature
 
-Clear names, no ambiguity. Every term has one meaning.
+Clear names, no ambiguity. Every term has one meaning. See [GLOSSARY.md](GLOSSARY.md) for the full canonical list.
 
-| Term | What it is | Example |
-|------|-----------|---------|
-| **A Player Labs** | The company. Makes all three products. | aplayerlabs.com |
-| **Playbooks** | Product #1. Builds software. Linear chain. | `aplayerlabs/playbooks` |
-| **Operatives** | Product #2. Runs and steers agentic systems. This repo. | `aplayerlabs/operatives` |
-| **Debriefs** | Product #3. Compounds knowledge. | `aplayerlabs/debriefs` |
-| **Skill** | A slash command. The unit of interaction. | `/operation-design`, `/signal` |
-| **Playfield** | The project folder. Shared concept across all three products. | Your repo, your workspace |
-| **Operative** | An autonomous specialist. Deployed into a playfield. | A configured agent with orientation, values, and purpose |
-| **Operation** | A recurring compounding cycle. Has the Five Jobs. | Weekly ad creative testing |
-| **Mission** | A goal-focused task that completes. | Competitive landscape research |
-| **OPERATIVES.md** | The state file. Shared surface between skills. | Lives in the playfield root |
+| Term | What it is |
+|------|-----------|
+| **A Player Labs** | The company |
+| **Operatives** | This product. The agent factory. |
+| **Skill** | A slash command. The unit of interaction. |
+| **Playfield** | The project folder. The bounded environment. |
+| **Operative** | An autonomous specialist. The thing you design and deploy. |
+| **Operation** | A recurring compounding cycle. Has the Five Jobs. |
+| **Mission** | A goal-focused task that completes. |
+| **OPERATIVES.md** | The deployment manifest. The spec. |
 
 ### What we don't say
 
-- ~~A Player Operatives~~ — the product is **Operatives**. The company is **A Player Labs**. Don't conflate them.
-- ~~Brain~~ — replaced by **operative** (the agent) or **skill** (the slash command), depending on context.
+- ~~A Player Operatives~~ — the product is **Operatives**. The company is **A Player Labs**.
+- ~~Brain~~ — replaced by **operative** (the agent) or **skill** (the slash command).
 - ~~Loop~~ — replaced by **operation** (if it recurs) or **mission** (if it completes).
 
 ## Overview
 
-Operatives is a set of nine specialist skills, each implemented as a Claude Code slash command. They share state through one file in the playfield — OPERATIVES.md — and collectively help the user design, instrument, orient, and steer operative architecture for agentic systems.
+Operatives is an agent factory. Nine specialist skills, each a Claude Code slash command, collectively walk the user through designing a complete autonomous specialist. The output is OPERATIVES.md — a portable, runtime-agnostic deployment manifest.
 
-Unlike Playbooks (a linear chain) or Debriefs (a data lifecycle), Operatives is a **toolkit**. The skills can be used in any order, revisited at any time, and combined however the architecture requires.
+The skills are the design tool. The spec is the product. The runtime is the client's choice.
+
+```
+RAW MATERIALS          FACTORY                    DEPLOYED OPERATIVE
+(business problem) →   (skill pack designs it) →  (spec runs on any runtime)
+                       
+                       /significance
+                       /operation-design
+                       /signal                →   OPERATIVES.md
+                       /orient                    (the deployment manifest)
+                       /values                         │
+                                              ┌────────┼────────┐
+                                              ▼        ▼        ▼
+                                           OpenClaw  Redis    Cron
+                                           (client A) (client B) (client C)
+```
+
+Unlike Playbooks (a linear chain that builds software) or Debriefs (a data lifecycle that compounds knowledge), Operatives is a **toolkit**. The skills can be used in any order, revisited at any time, and combined however the architecture requires.
 
 ```
 /operatives (router)
@@ -52,25 +67,25 @@ Four levels. Each has a precise name.
 
 ### Operative
 
-The autonomous agent itself. You deploy it into a playfield. It has orientation (role, process, heuristics, guardrails, output spec). It has values injected. It knows its significant purpose. This is what you "install" and what corporate trusts.
+The autonomous specialist itself. Deployed into a playfield with orientation, values, and significant purpose. This is what the factory produces. This is what corporate installs with confidence — because every dimension is defined, stress-tested, and documented in the spec.
 
 ### Playfield
 
-The bounded environment where the operative works. A repo. A workspace. A Slack channel. A database. The operative doesn't roam freely — it operates within a defined playfield. The playfield provides context, constraints, and the surface area for operations and missions.
+The bounded environment where the operative works. A repo. A workspace. A Slack channel. A database. The operative doesn't roam freely — it operates within a defined playfield. Constraints are features. Boundaries create focus.
 
 This is the same concept as the playfield in Playbooks — the project folder structure that skills read from and write to.
 
 ### Operation
 
-A recurring compounding cycle. It has the Five Jobs: physical output, boundary event, signal, leading indicator, closing mechanism. Operations spin. Each cycle feeds the next. The compound interest of agentic systems lives here. Cron jobs, flywheels, recurring analysis — these are operations.
+A recurring compounding cycle. It has the Five Jobs: physical output, boundary event, signal, leading indicator, closing mechanism. Operations spin. Each cycle feeds the next. The compound interest of agentic systems lives here.
 
 ### Mission
 
-An autotelic, goal-focused task. It has a defined objective and completion criteria. Auto-research. Competitive analysis. A one-time deep investigation. Missions complete and deliver an outcome. They don't recur — though the findings from a mission might feed an operation.
+An autotelic, goal-focused task. It has a defined objective and completion criteria. Missions complete and deliver an outcome. They don't recur — though findings from a mission might feed an operation.
 
 ### How they relate
 
-An operative runs operations AND missions inside a playfield. Operations are the steady-state compounding engine. Missions are the directed strikes. Both happen within the playfield's boundaries.
+An operative runs operations AND missions inside a playfield. Operations are the steady-state compounding engine. Missions are the directed strikes.
 
 ```
 ┌─────────────────────────────────────┐
@@ -95,24 +110,37 @@ An operative runs operations AND missions inside a playfield. Operations are the
 | **Ends when** | Never — it cycles | Goal is achieved |
 | **Defined by** | The Five Jobs | Objective + completion criteria |
 | **Compounds via** | Closing mechanism (cycle N → N+1) | Findings feed operations |
-| **Examples** | Weekly ad testing, daily P&L, continuous lead scoring | Competitive landscape research, architecture audit, one-time deep investigation |
+| **Examples** | Weekly ad testing, daily P&L, continuous lead scoring | Competitive landscape research, architecture audit, deep investigation |
 | **Designed by** | /operation-design | (future: /mission-design) |
 
-## The state file: OPERATIVES.md
+## The spec: OPERATIVES.md
 
-Every skill reads and writes one file in the playfield root: **OPERATIVES.md**.
-
-Each skill owns a section. Sections accumulate as the user designs their operative architecture. Skills add to OPERATIVES.md — they never overwrite other skills' sections.
+OPERATIVES.md is the deployment manifest. Each skill owns a section. When all sections are complete, the document contains everything a runtime needs to instantiate and run an operative.
 
 ```
-## Significance        ← /significance
-## Through Line        ← /throughline
-## Operation Design    ← /operation-design
-## Signal              ← /signal
-## Orientation         ← /orient
-## Values              ← /values
-## Win Selection       ← /wins
+## Significance        ← why this operative exists
+## Through Line        ← alignment checks
+## Operation Design    ← the recurring cycles, defined to irreducible precision
+## Signal              ← what to measure, how to capture, how to compound
+## Orientation         ← role, process, heuristics, guardrails, output spec
+## Values              ← what the operative optimises for
+## Win Selection       ← which results to compound
 ```
+
+### What the spec gives a runtime
+
+A runtime that reads OPERATIVES.md knows:
+
+| Spec Section | Runtime gets |
+|-------------|-------------|
+| Significance | The operative's purpose — what it's optimising toward |
+| Operation Design | What to execute, when to fire (cadence), boundary conditions |
+| Signal | What to measure, how to evaluate each cycle, contamination guards |
+| Orientation | Role definition, heuristics, guardrails, output format |
+| Values | Decision criteria — what to optimise for when there's a choice |
+| Win Selection | Which results to compound, which to release |
+
+The spec is portable. Load it into OpenClaw, parse it into a Redis queue, wire it to a cron — the runtime is the client's choice. The spec is the interface.
 
 ### Ownership rules
 
@@ -217,6 +245,9 @@ The same design constraints apply at every level. The human's role changes with 
 
 ## Key concepts
 
+### The spec is the product
+The skills are the design tool. OPERATIVES.md is the product. A complete spec contains everything a runtime needs — purpose, operations, signals, orientation, values, guardrails. Design once, deploy anywhere.
+
 ### Information asymmetry compounds
 The firms that win have always had better signal. In the agentic age, that asymmetry makes your operations get smarter faster than your competitors' operations. The gap compounds.
 
@@ -234,11 +265,11 @@ An operative without a playfield is an agent without a job site. The playfield d
 
 ## What this is not
 
+- Not a runtime — this is the factory that produces the spec. The runtime is yours to choose.
 - Not a software pipeline (that's Playbooks)
 - Not a knowledge base (that's Debriefs)
 - Not a project management system
-- Not a task runner — operations are designed here, not executed. The operative architecture defines what runs, not how it runs
-- Not prescriptive about tools — the operations you design here can be implemented with any technology
+- Not prescriptive about infrastructure — the specs you produce here can run on any stack
 
 ## The spine
 

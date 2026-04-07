@@ -15,7 +15,7 @@ Three products. Each stands alone as a name. Never prefix with "A Player".
 | Term | What it is | Repo |
 |------|-----------|------|
 | **Playbooks** | Product #1. Builds software. Linear skill chain. | `aplayerlabs/playbooks` |
-| **Operatives** | Product #2. Designs and steers agentic systems. This repo. | `aplayerlabs/operatives` |
+| **Operatives** | Product #2. The agent factory. Designs operatives, produces deployment-ready specs. This repo. | `aplayerlabs/operatives` |
 | **Debriefs** | Product #3. Compounds knowledge. | `aplayerlabs/debriefs` |
 
 The flywheel: **Playbooks → Operatives → Debriefs → Playbooks**.
@@ -29,7 +29,7 @@ The flywheel: **Playbooks → Operatives → Debriefs → Playbooks**.
 | **Operative** | An autonomous specialist. Deployed into a playfield with orientation, values, and purpose. The thing you design using this skill pack. | Operatives |
 | **Operation** | A recurring compounding cycle. Defined by the Five Jobs: physical output, boundary event, signal, leading indicator, closing mechanism. | Operatives |
 | **Mission** | An autotelic, goal-focused task that completes. Has objective and completion criteria. Findings feed operations. | Operatives |
-| **OPERATIVES.md** | The state file. Lives in the playfield root. Each skill owns a section. | Operatives |
+| **OPERATIVES.md** | The deployment manifest. The spec. Lives in the playfield root. Each skill owns a section. When complete, contains everything a runtime needs to instantiate and run an operative. | Operatives |
 | **The Five Jobs** | The method for defining an operation: (1) name the output, (2) find the boundary, (3) stress test the signal, (4) confirm it's leading, (5) close the cycle. | Operatives |
 
 ## Hierarchy

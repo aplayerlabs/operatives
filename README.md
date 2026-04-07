@@ -1,49 +1,63 @@
 # Operatives
 
-Deploy autonomous specialists that run your operations and execute your missions.
+Design autonomous specialists. Produce deployment-ready specs. Run them on any runtime.
 
-Operatives is a skill pack for [Claude Code](https://docs.anthropic.com/en/docs/claude-code) that helps you design, instrument, and steer the recurring systems that make agentic businesses compound. Define what's significant, design operations with precision, orient the agents that run them, inject your values, and choose which wins to compound.
+Operatives is the agent factory. You bring the business problem. The skills walk you through designing a complete operative — purpose, operations, signals, orientation, values, guardrails. The output is OPERATIVES.md: a portable deployment manifest that any runtime can read.
 
 The spine: *The operative runs the mission. The human chooses what is worth building. Build something significant.*
 
+```
+RAW MATERIALS          FACTORY                    DEPLOYED OPERATIVE
+(business problem) →   (skill pack designs it) →  (spec runs on any runtime)
+                       
+                       /significance
+                       /operation-design
+                       /signal                →   OPERATIVES.md
+                       /orient                    (the deployment manifest)
+                       /values                         │
+                                              ┌────────┼────────┐
+                                              ▼        ▼        ▼
+                                           OpenClaw  Redis    Cron
+                                           (client A) (client B) (client C)
+```
+
 ## Where Operatives fits
 
-[A Player Labs](https://aplayerlabs.com) makes three skill packs. Each one does a different job. Together they form a flywheel:
+[A Player Labs](https://aplayerlabs.com) makes three products. Each one does a different job. Together they form a flywheel:
 
 ```
 Playbooks → Operatives → Debriefs → Playbooks
    build       run          learn       build better
 ```
 
-**[Playbooks](https://github.com/aplayerlabs/playbooks)** builds the thing. Problem → plan → design → working app. A linear chain from zero to shipped.
+**[Playbooks](https://github.com/aplayerlabs/playbooks)** builds the thing. Problem → plan → design → working app.
 
-**Operatives** runs the thing. Once the app exists, you need recurring systems that compound — ad testing cycles, lead scoring flywheels, weekly P&L analysis. You also need directed missions — competitive research, architecture audits, deep investigations. Operatives designs both.
+**Operatives** designs what runs the thing. Recurring operations that compound. Directed missions that complete. The output is a spec — not code, not a dashboard, a deployment-ready manifest.
 
-**Debriefs** learns from the thing. What did the operatives discover? What patterns emerged? What should change? Debriefs compounds knowledge so the next cycle of Playbooks builds something smarter.
+**Debriefs** learns from what ran. What did the operatives discover? What patterns emerged? What should change?
 
 Each product works independently. Together they compound.
 
 ## When to use Operatives
 
-You've built something (or you have something running). Now you need to answer:
+You've built something (or you have something running). Now you need:
 
-- What recurring work should this system do every cycle?
-- How do I know if it's working?
-- What signal should I watch? Is it even the right signal?
-- How do I make sure cycle N+1 is better than cycle N?
-- Who (or what) runs this, and what are their guardrails?
-- What am I optimising for — and is that still the right thing?
+- Recurring systems that get smarter every cycle
+- Autonomous agents with guardrails corporate can trust
+- Signal design that tells you if it's working — not vanity metrics
+- A portable spec you can deploy to any infrastructure
 
-If you're asking these questions, type `/operatives`.
+If you're asking "how do I make this run itself and compound?" — type `/operatives`.
 
 ## How it's structured
 
-**One toolkit. Nine skills. Two kinds of work.**
+**One factory. Nine skills. One output: the spec.**
 
-- **Skills** are the nine specialist slash commands. Unlike Playbooks (a linear chain), these are tools — use them in any order, revisit anytime.
-- **Operations** are recurring compounding cycles. The flywheel. The cron job that gets smarter. Defined by the Five Jobs.
-- **Missions** are goal-focused tasks that complete. Research, audits, investigations. Findings feed operations.
-- The **playfield** is the project folder where every skill reads from and writes to.
+- **Skills** are the nine specialist slash commands. Use them in any order, revisit anytime.
+- **OPERATIVES.md** is the deployment manifest. Each skill writes a section. The complete document is everything a runtime needs to instantiate and run an operative.
+- **Operations** are recurring compounding cycles. The flywheel. Defined by the Five Jobs.
+- **Missions** are goal-focused tasks that complete. Research, audits, investigations.
+- The **playfield** is the bounded environment where the operative works.
 
 ## The skills
 
@@ -77,39 +91,39 @@ cd ~/.claude/skills/operatives && ./setup
 
 Then open Claude Code and type `/operatives`.
 
-## How it works
+## The output: OPERATIVES.md
 
-Every skill operates on the **playfield** — your project folder. Skills share state through one file:
-
-- **OPERATIVES.md** — the operative architecture document. Each skill owns a section. Sections accumulate as you design your system.
+Every skill writes to one file. When complete, OPERATIVES.md contains:
 
 ```
-## Significance      ← written by /significance
-## Through Line      ← written by /throughline
-## Operation Design  ← written by /operation-design
-## Signal            ← written by /signal
-## Orientation       ← written by /orient
-## Values            ← written by /values
-## Win Selection     ← written by /wins
+## Significance      ← why this operative exists
+## Through Line      ← alignment checks
+## Operation Design  ← the recurring cycles, defined to irreducible precision
+## Signal            ← what to measure, how to capture, how to compound
+## Orientation       ← role, process, heuristics, guardrails, output spec
+## Values            ← what the operative optimises for
+## Win Selection     ← which results to compound
 ```
 
-OPERATIVES.md is the source of truth for your operative architecture. It's the handoff mechanism between skills and the persistent record of your design decisions.
+This is the deployment manifest. It defines everything a runtime needs: what the operative does, when it fires, what signal it reads, what guardrails it respects, what it optimises for, and how each cycle feeds the next.
+
+Load it into OpenClaw. Parse it into a Redis queue. Wire it to a cron job. The spec is the interface. The runtime is yours to choose.
 
 ## The sequence
 
-These skills are tools, not a pipeline. Use them in whatever order your architecture needs. That said, there's a natural flow:
+These skills are tools, not a pipeline. That said, there's a natural flow:
 
-1. **Start with significance.** Everything traces back to what you're building and why it matters. Skip this and the machine compounds in the wrong direction.
+1. **Start with significance.** Everything traces back to what you're building and why.
 2. **Design your operations.** The atomic unit — one recurring job, defined to irreducible precision.
-3. **Instrument the signals.** What data lives at the boundary event? How do you capture it? How does decision memory compound?
-4. **Orient your agents.** The expert leaves the room. The expertise stays.
+3. **Instrument the signals.** What data lives at the boundary event? How does decision memory compound?
+4. **Orient the operative.** The expert leaves the room. The expertise stays.
 5. **Inject your values.** The machine can optimise anything. You choose what's worth optimising for.
-6. **Select your wins.** The operations are running. Which results do you compound? Which do you release?
-7. **Check the through line.** At any point, verify that what you're doing traces back to what you're building.
+6. **Select your wins.** The operations are running. Which results do you compound?
+7. **Check the through line.** Verify what you're doing traces back to what you're building.
 
 ## Architecture
 
-See [ARCHITECTURE.md](ARCHITECTURE.md) for the full taxonomy, how skills connect, and the OPERATIVES.md contract.
+See [ARCHITECTURE.md](ARCHITECTURE.md) for the full taxonomy, how skills connect, and the OPERATIVES.md spec format.
 
 ## Update
 
