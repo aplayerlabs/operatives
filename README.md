@@ -43,13 +43,13 @@ RAW MATERIALS          FACTORY                    DEPLOYED OPERATIVE
 
 **Playbooks** builds. **Operatives** runs. **Debriefs** learns. **Assets** compound.
 
-**[Playbooks](https://github.com/aplayerlabs/playbooks)** takes a problem to a working app. Produces assets.
+**[Playbooks](https://github.com/aplayerlabs/playbooks)** — sequential. An executable build sequence. Defined input, ordered skills, defined output. Authored by humans, executed by agents, refined through debriefs. A playbook that hasn't been run is just an opinion. One that's been run and refined is institutional knowledge with teeth.
 
-**Operatives** designs what runs the app. Recurring operations, directed missions. Consumes and updates assets. The output is a deployment-ready spec any runtime can read.
+**Operatives** — cyclical. A persistent autonomous agent that watches for a trigger, executes a response, and returns to watching. It doesn't terminate — it cycles. Where a playbook is invoked, an operative is deployed. An operative without a boundary event is just a busy loop. A well-tuned operative compounds every asset it touches.
 
-**Debriefs** captures what was learned. Evaluates assets. Feeds the next build cycle.
+**Debriefs** — reflective. Structured intelligence extracted from what happened. Raw data in, synthesised understanding out — patterns, anomalies, causal links, recommendations. Debriefs feed playbooks, tune operatives, and appraise assets. A debrief that doesn't change a playbook or operative was a waste of cycles.
 
-**Assets** are the center of the flywheel. Design tokens, operative specs, application code, decision history, component libraries — everything that persists between cycles and gets better each turn.
+**Assets** — cumulative. Any durable artefact that compounds through reuse. Code, design systems, trained models, documented decisions, brand. Assets are the residue of playbooks running, operatives cycling, and debriefs refining. Every rotation should leave more than the last. An asset nobody's compounding is depreciating.
 
 ## When to use Operatives
 

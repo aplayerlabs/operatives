@@ -97,7 +97,7 @@ check_word() {
 # "loop" as domain concept (word boundary, case insensitive)
 # Exclude "for loop", "while loop", "event loop" (programming constructs)
 LOOP_MATCHES=$(grep -wniE "\bloop(s)?\b" $FILES 2>/dev/null \
-  | grep -viE "(for loop|while loop|event loop|run loop)" || true)
+  | grep -viE "(for loop|while loop|event loop|run loop|busy loop)" || true)
 
 if [ -n "$LOOP_MATCHES" ]; then
   echo "  FAIL  \"loop/loops\" → use \"operation\" (recurring) or \"mission\" (goal-focused)"
