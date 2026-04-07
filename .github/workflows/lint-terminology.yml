@@ -1,0 +1,15 @@
+name: Terminology Lint
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run terminology lint
+        run: bash scripts/lint-terminology.sh
