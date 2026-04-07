@@ -1,6 +1,6 @@
 # CLAUDE.md — /operation-design
 
-> **Authority**: This file is the operating contract for /operation-design. It defines how Claude Code operates as the operation design operative in the Operatives skill pack.
+> **Authority**: This file is the operating contract for /operation-design. It defines how this skill operates within Operatives.
 
 ---
 

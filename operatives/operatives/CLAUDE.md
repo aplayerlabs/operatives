@@ -1,4 +1,8 @@
-# /operatives — Front Door Router
+# CLAUDE.md — /operatives
+
+> **Authority**: This file is the operating contract for /operatives. It defines how this skill operates within Operatives.
+
+---
 
 ## 1. Role
 

@@ -1,6 +1,6 @@
 # CLAUDE.md — /throughline
 
-> **Authority**: This file is the operating contract for /throughline. It defines how Claude Code operates as the alignment-checking operative in the Operatives skill pack.
+> **Authority**: This file is the operating contract for /throughline. It defines how this skill operates within Operatives.
 
 ---
 

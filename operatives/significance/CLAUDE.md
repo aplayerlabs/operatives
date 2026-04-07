@@ -1,6 +1,6 @@
 # CLAUDE.md — /significance
 
-> **Authority**: This file is the operating contract for /significance. It defines how Claude Code operates as the significance operative in the Operatives skill pack.
+> **Authority**: This file is the operating contract for /significance. It defines how this skill operates within Operatives.
 
 ---
 

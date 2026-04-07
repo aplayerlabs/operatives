@@ -1,4 +1,8 @@
-# /update — Get Latest
+# CLAUDE.md — /update
+
+> **Authority**: This file is the operating contract for /update. It defines how this skill operates within Operatives.
+
+---
 
 ## 1. Role
 

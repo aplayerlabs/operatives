@@ -1,6 +1,6 @@
 # CLAUDE.md — /orient
 
-> **Authority**: This file is the operating contract for /orient. It defines how Claude Code operates as the orientation operative in the Operatives skill pack.
+> **Authority**: This file is the operating contract for /orient. It defines how this skill operates within Operatives.
 
 ---
 

@@ -1,6 +1,6 @@
 # CLAUDE.md — /signal
 
-> **Authority**: This file is the operating contract for /signal. It defines how Claude Code operates as the signal design operative in the Operatives skill pack.
+> **Authority**: This file is the operating contract for /signal. It defines how this skill operates within Operatives.
 
 ---
 

@@ -1,6 +1,6 @@
 # CLAUDE.md — /values
 
-> **Authority**: This file is the operating contract for /values. It defines how Claude Code operates as the values injection operative in the Operatives skill pack.
+> **Authority**: This file is the operating contract for /values. It defines how this skill operates within Operatives.
 
 ---
 

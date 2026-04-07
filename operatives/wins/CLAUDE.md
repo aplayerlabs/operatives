@@ -1,6 +1,6 @@
 # CLAUDE.md — /wins
 
-> **Authority**: This file is the operating contract for /wins. It defines how Claude Code operates as the win selection operative in the Operatives skill pack.
+> **Authority**: This file is the operating contract for /wins. It defines how this skill operates within Operatives.
 
 ---
 
