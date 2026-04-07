@@ -1,11 +1,11 @@
 ---
-name: aplayerloops-update
+name: operatives-update
 version: 0.1.0
 description: |
-  Update A Player Loops to the latest version.
+  Update Operatives to the latest version.
 voice-triggers:
-  - "update loops"
-  - "upgrade loops"
+  - "update operatives"
+  - "upgrade operatives"
 ---
 
 # /update — Get Latest

@@ -4,7 +4,7 @@ version: 0.1.0
 description: |
   Build the 5-component orientation for an agent: role, process, heuristics, guardrails, output spec.
 effort: "high"
-argument-hint: "name the loop or agent you want to orient"
+argument-hint: "name the operation or agent you want to orient"
 voice-triggers:
   - "orient"
   - "orientation"
@@ -15,5 +15,5 @@ voice-triggers:
 # /orient — Build Agent Orientation
 
 Read and follow ${CLAUDE_SKILL_DIR}/CLAUDE.md.
-Start by checking for LOOPS.md in the current working directory.
+Start by checking for OPERATIVES.md in the current working directory.
 Follow the Session Start Protocol in CLAUDE.md.

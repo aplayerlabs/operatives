@@ -15,5 +15,5 @@ voice-triggers:
 # /throughline — Check Alignment
 
 Read and follow ${CLAUDE_SKILL_DIR}/CLAUDE.md.
-Start by checking for LOOPS.md in the current working directory.
+Start by checking for OPERATIVES.md in the current working directory.
 Follow the Session Start Protocol in CLAUDE.md.

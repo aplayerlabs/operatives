@@ -2,20 +2,20 @@
 set -euo pipefail
 shopt -s nocasematch 2>/dev/null || true
 
-# A Player Loops — Setup Script
-# Registers all brains as Claude Code slash commands via directory symlinks.
+# Operatives — Setup Script
+# Registers all operatives as Claude Code slash commands via directory symlinks.
 # Idempotent — safe to run multiple times.
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)"
-BRAINS_DIR="$SCRIPT_DIR/brains"
+OPERATIVES_DIR="$SCRIPT_DIR/operatives"
 SKILLS_DIR="${HOME}/.claude/skills"
 
-# The brains to register
-BRAINS=(
-  loops
+# The operatives to register
+OPERATIVES=(
+  operatives
   significance
   throughline
-  loop-design
+  operation-design
   signal
   orient
   values
@@ -24,7 +24,7 @@ BRAINS=(
 )
 
 echo ""
-echo "  A Player Loops — Setup"
+echo "  Operatives — Setup"
 echo "  ======================"
 echo ""
 
@@ -46,7 +46,7 @@ for entry in "$SKILLS_DIR"/*/; do
 
   if [ -L "$entry" ]; then
     target="$(readlink "$entry" 2>/dev/null || true)"
-    if [[ "$target" == "$BRAINS_DIR"* ]]; then
+    if [[ "$target" == "$OPERATIVES_DIR"* ]]; then
       rm "$entry"
       CLEANED=$((CLEANED + 1))
     fi
@@ -61,27 +61,27 @@ fi
 echo ""
 
 # --- Create new symlinks ---
-# Each brain directory is symlinked as:
-#   ~/.claude/skills/{brain-name} → /path/to/repo/brains/{brain-name}
+# Each operative directory is symlinked as:
+#   ~/.claude/skills/{operative-name} → /path/to/repo/operatives/{operative-name}
 
-echo "  Registering brains..."
+echo "  Registering operatives..."
 echo ""
 REGISTERED=0
 FAILED=0
 
-for brain in "${BRAINS[@]}"; do
-  source_dir="$BRAINS_DIR/$brain"
+for operative in "${OPERATIVES[@]}"; do
+  source_dir="$OPERATIVES_DIR/$operative"
   skill_file="$source_dir/SKILL.md"
-  link_path="$SKILLS_DIR/$brain"
+  link_path="$SKILLS_DIR/$operative"
 
   if [ ! -d "$source_dir" ]; then
-    echo "  SKIP  /$brain — directory not found: $source_dir"
+    echo "  SKIP  /$operative — directory not found: $source_dir"
     FAILED=$((FAILED + 1))
     continue
   fi
 
   if [ ! -f "$skill_file" ]; then
-    echo "  SKIP  /$brain — no SKILL.md found"
+    echo "  SKIP  /$operative — no SKILL.md found"
     FAILED=$((FAILED + 1))
     continue
   fi
@@ -91,45 +91,45 @@ for brain in "${BRAINS[@]}"; do
   fi
 
   if ln -s "$source_dir" "$link_path" 2>/dev/null; then
-    echo "  OK    /$brain"
+    echo "  OK    /$operative"
     REGISTERED=$((REGISTERED + 1))
   else
-    echo "  FAIL  /$brain — could not create symlink (permissions?)"
+    echo "  FAIL  /$operative — could not create symlink (permissions?)"
     FAILED=$((FAILED + 1))
   fi
 done
 
 echo ""
 echo "  ---"
-echo "  Registered: $REGISTERED brain(s)"
+echo "  Registered: $REGISTERED operative(s)"
 if [ "$FAILED" -gt 0 ]; then
-  echo "  Failed:     $FAILED brain(s)"
+  echo "  Failed:     $FAILED operative(s)"
 fi
 echo ""
 
-# --- Loop architecture ---
-echo "  Loop Architecture Brains"
-echo "  ========================"
+# --- Operative architecture ---
+echo "  Operative Architecture"
+echo "  ======================"
 echo ""
-echo "  /loops              → Start here (reads your state, guides you)"
+echo "  /operatives         → Start here (reads your state, guides you)"
 echo ""
 echo "  Foundation:"
 echo "  /significance       → Define your significant purpose"
 echo "  /throughline        → Check if wins point toward purpose"
 echo ""
 echo "  Design:"
-echo "  /loop-design        → Design a single loop (the 5 Jobs)"
+echo "  /operation-design   → Design a single operation (the 5 Jobs)"
 echo "  /signal             → Identify what data matters"
 echo ""
 echo "  Orientation:"
 echo "  /orient             → Build agent orientation (5 components)"
 echo "  /values             → Inject values into the system"
 echo ""
-echo "  Operation:"
+echo "  Steering:"
 echo "  /wins               → Evaluate which wins to compound"
 echo ""
 echo "  Utility:"
-echo "  /update             → Get the latest brains"
+echo "  /update             → Get the latest operatives"
 echo ""
-echo "  Type /loops in Claude Code to start."
+echo "  Type /operatives in Claude Code to start."
 echo ""
