@@ -23,7 +23,7 @@ RAW MATERIALS          FACTORY                    DEPLOYED OPERATIVE
 
 ## Where Operatives fits
 
-[A Player Labs](https://aplayerlabs.com) builds the flywheel for agentic businesses. Three stages, one compounding cycle, assets at the center:
+Operatives is the **run** stage of [The AI Flywheel](https://github.com/aplayerlabs/flywheel) by [A Player Labs](https://aplayerlabs.com). Four stages, one compounding cycle, [assets](https://github.com/aplayerlabs/assets) at the center:
 
 ```
             PLAYBOOKS
